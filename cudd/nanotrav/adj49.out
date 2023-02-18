@@ -1,0 +1,147 @@
+# Nanotrav Version #0.13, Release date 2015/7/15
+# nanotrav/nanotrav -p 1 -ordering dfs -reordering cogroup -drop -char2vect -cofest ./nanotrav/adj49.blif
+# CUDD Version 3.1.0
+Order before final reordering
+CA OR NV AZ WA ID UT MT 
+WY CO NM ND SD NE KS OK 
+TX MN IA MO AR LA WI IL 
+KY TN MS MI IN AL OH WV 
+VA NC GA FL PA MD DC SC 
+NY NJ DE VT NH MA CT ME 
+RI 
+Number of inputs = 49
+BDD reordering with converging group sifting: from 431 to ... 341 nodes in 0 sec
+New order
+OR NV ID WA AZ CA UT NM 
+WY CO MT SD MN ND IA NE 
+OK KS MO TX MS LA WI AR 
+KY MI IN IL OH TN AL FL 
+NC SC GA WV MD DC VA PA 
+NJ DE NY CT RI NH ME VT 
+MA 
+Testing char-to-vect
+*** indep ***
+f: 341 nodes 1 leaves 2.11955e+08 minterms
+Vector Size: 49 components 1356 nodes
+v[0]: 5 nodes 1 leaves 3.51844e+13 minterms
+v[1]: 2 nodes 1 leaves 2.81475e+14 minterms
+v[2]: 3 nodes 1 leaves 1.40737e+14 minterms
+v[3]: 4 nodes 1 leaves 2.11106e+14 minterms
+v[4]: 5 nodes 1 leaves 1.05553e+14 minterms
+v[5]: 4 nodes 1 leaves 7.03687e+13 minterms
+v[6]: 6 nodes 1 leaves 8.79609e+13 minterms
+v[7]: 8 nodes 1 leaves 1.45136e+14 minterms
+v[8]: 7 nodes 1 leaves 2.0231e+14 minterms
+v[9]: 11 nodes 1 leaves 9.8956e+13 minterms
+v[10]: 5 nodes 1 leaves 1.75922e+14 minterms
+v[11]: 11 nodes 1 leaves 7.75156e+13 minterms
+v[12]: 9 nodes 1 leaves 1.07752e+14 minterms
+v[13]: 18 nodes 1 leaves 6.94754e+13 minterms
+v[14]: 26 nodes 1 leaves 1.34673e+14 minterms
+v[15]: 13 nodes 1 leaves 1.44036e+14 minterms
+v[16]: 14 nodes 1 leaves 1.21496e+14 minterms
+v[17]: 10 nodes 1 leaves 2.27599e+14 minterms
+v[18]: 11 nodes 1 leaves 1.13799e+14 minterms
+v[19]: 35 nodes 1 leaves 9.18178e+13 minterms
+v[20]: 42 nodes 1 leaves 2.974e+13 minterms
+v[21]: 16 nodes 1 leaves 1.10363e+14 minterms
+v[22]: 12 nodes 1 leaves 1.10776e+14 minterms
+v[23]: 45 nodes 1 leaves 5.09413e+13 minterms
+v[24]: 36 nodes 1 leaves 2.35566e+14 minterms
+v[25]: 45 nodes 1 leaves 5.14565e+13 minterms
+v[26]: 2 nodes 1 leaves 2.81475e+14 minterms
+v[27]: 13 nodes 1 leaves 2.26087e+14 minterms
+v[28]: 46 nodes 1 leaves 9.88342e+13 minterms
+v[29]: 47 nodes 1 leaves 1.15009e+14 minterms
+v[30]: 47 nodes 1 leaves 4.94171e+13 minterms
+v[31]: 48 nodes 1 leaves 1.38983e+14 minterms
+v[32]: 78 nodes 1 leaves 9.92951e+12 minterms
+v[33]: 46 nodes 1 leaves 2.55747e+14 minterms
+v[34]: 51 nodes 1 leaves 2.47803e+13 minterms
+v[35]: 48 nodes 1 leaves 2.2397e+14 minterms
+v[36]: 50 nodes 1 leaves 9.36374e+13 minterms
+v[37]: 49 nodes 1 leaves 2.11983e+14 minterms
+v[38]: 50 nodes 1 leaves 1.75483e+14 minterms
+v[39]: 47 nodes 1 leaves 1.53602e+14 minterms
+v[40]: 52 nodes 1 leaves 1.17328e+14 minterms
+v[41]: 51 nodes 1 leaves 2.34656e+14 minterms
+v[42]: 53 nodes 1 leaves 6.43323e+13 minterms
+v[43]: 54 nodes 1 leaves 1.11405e+14 minterms
+v[44]: 2 nodes 1 leaves 2.81475e+14 minterms
+v[45]: 57 nodes 1 leaves 1.39257e+13 minterms
+v[46]: 53 nodes 1 leaves 2.22811e+14 minterms
+v[47]: 3 nodes 1 leaves 1.40737e+14 minterms
+v[48]: 54 nodes 1 leaves 1.7007e+14 minterms
+Testing BDD cofactor estimation algorithms
+TEST-COF:: indep (49 vars): 341 nodes 1 leaves 2.11955e+08 minterms
+T-c   : 13207
+T-c E : 13753 47
+T-c S : 14661 130
+**** CUDD modifiable parameters ****
+Hard limit for cache size: 11184810
+Cache hit threshold for resizing: 30%
+Garbage collection enabled: yes
+Limit for fast unique table growth: 6710886
+Maximum number of variables sifted per reordering: 1000000
+Maximum number of variable swaps per reordering: 1000000000
+Maximum growth while sifting a variable: 1.2
+Dynamic reordering of BDDs enabled: no
+Default BDD reordering method: 4
+Dynamic reordering of ZDDs enabled: no
+Default ZDD reordering method: 4
+Realignment of ZDDs to BDDs enabled: no
+Realignment of BDDs to ZDDs enabled: no
+Dead nodes counted in triggering reordering: no
+Group checking criterion: 7
+Recombination threshold: 0
+Symmetry violation threshold: 10
+Arc violation threshold: 10
+GA population size: 0
+Number of crossovers for GA: 0
+Next reordering threshold: 782
+**** CUDD non-modifiable parameters ****
+Memory in use: 10088544
+Peak number of nodes: 17374
+Peak number of live nodes: 2720
+Number of BDD variables: 49
+Number of ZDD variables: 0
+Number of cache entries: 32768
+Number of cache look-ups: 52919
+Number of cache hits: 17340
+Number of cache insertions: 25572
+Number of cache collisions: 6148
+Number of cache deletions: 1748
+Cache used slots = 56.45% (expected 51.62%)
+Soft limit for cache size: 53248
+Number of buckets in unique table: 13312
+Used buckets in unique table: 57.46% (expected 57.13%)
+Number of BDD and ADD nodes: 17253
+Number of ZDD nodes: 0
+Number of dead BDD and ADD nodes: 16861
+Number of dead ZDD nodes: 0
+Total number of nodes allocated: 19629
+Total number of nodes reclaimed: 740
+Garbage collections so far: 1
+Time for garbage collection: 0.00 sec
+Reorderings so far: 1
+Time for reordering: 0.00 sec
+Final size: 341
+total time = 0.00 sec
+Runtime Statistics
+------------------
+Machine name: freney
+User time      0.0 seconds
+System time    0.0 seconds
+
+Average resident text size       =     0K
+Average resident data+stack size =     0K
+Maximum resident size            = 14692K
+
+Virtual memory limit             = unlimited (unlimited)
+Major page faults = 0
+Minor page faults = 3006
+Swaps = 0
+Input blocks = 0
+Output blocks = 8
+Context switch (voluntary) = 10
+Context switch (involuntary) = 2

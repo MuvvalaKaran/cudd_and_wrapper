@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: PyDD
+Version: 1.0.0
+Summary: Python wrapper for the CUDD decision diagram library
+Home-page: http://vlsi.colorado.edu/~fabio
+Author: Fabio Somenzi
+Author-email: Fabio@Colorado.EDU
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
