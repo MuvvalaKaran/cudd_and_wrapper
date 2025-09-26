@@ -302,6 +302,8 @@ cdef extern from "cudd.h":
     DdNode * Cudd_addFindMin(DdManager * manager, DdNode * f)
     DdNode * Cudd_addIthBit(DdManager * manager, DdNode * f, int bit)
     DdNode * Cudd_addCompose(DdManager * manager, DdNode * f, DdNode * g, int v)
+    DdNode * Cudd_addVectorCompose(DdManager * manager, DdNode * f,
+                                   DdNode ** vector)
     DdNode * Cudd_addSwapVariables(DdManager * manager, DdNode * f,
                                    DdNode ** x, DdNode ** y, int n)
     DdNode * Cudd_addPermute(DdManager * manager, DdNode * node, int * permut)

@@ -2506,6 +2506,33 @@ cdef class ADD:
             raise MemoryError(self._mgr.readErrorCode())
         return MakeADD(self._mgr, res)
     
+
+    def vectorCompose(self, list vars, list vector):
+        """ Composes an ADD with a vector of 0-1 ADDs."""
+        cdef int ns = len(vars)
+        if len(vector) != ns:
+            raise TypeError("The number of functions should equal the number of variables")
+        cdef ccudd.DdManager * dd = <ccudd.DdManager *>self._mgr._manager
+        cdef int size = ccudd.Cudd_ReadSize(dd)
+        if ns > size:
+            raise TypeError("More substitutions than existing ADD variables")
+        cdef ccudd.DdNode * * functions = <ccudd.DdNode * *> malloc(size * sizeof(ccudd.DdNode *))
+        if functions is NULL:
+            raise MemoryError("memory allocation failed")
+        # Here we rely on the fact that projection functions need no referencing.
+        for index in range(size):
+            functions[index] = ccudd.Cudd_addIthVar(dd, index)
+        for i in range(ns):
+            if not vars[i].isVar():
+                free(functions)
+                raise TypeError("Found a non-variable at position {0}".format(i))
+            functions[vars[i].index()] = (<BDD>vector[i])._node
+        cdef ccudd.DdNode * res = ccudd.Cudd_addVectorCompose(dd, self._node, functions)
+        free(functions)
+        if res is NULL:
+            raise MemoryError(self._mgr.readErrorCode())
+        return MakeADD(self._mgr, res)
+    
     def swapVariables(self, list current_vars, list new_vars):
         """Swap two lists of variables in this ADD."""
         if len(current_vars) != len(new_vars):
